@@ -1,0 +1,63 @@
+{
+  "name": "Prediction",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Prediction date"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Stock symbol"
+    },
+    "signal": {
+      "type": "string",
+      "enum": [
+        "BUY",
+        "HOLD",
+        "SELL"
+      ],
+      "description": "Trading signal"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Model confidence score"
+    },
+    "predicted_price": {
+      "type": "number",
+      "description": "Predicted next day price"
+    },
+    "current_price": {
+      "type": "number",
+      "description": "Current stock price"
+    },
+    "expected_return": {
+      "type": "number",
+      "description": "Expected return percentage"
+    },
+    "model_used": {
+      "type": "string",
+      "enum": [
+        "LogisticRegression",
+        "RandomForest",
+        "XGBoost"
+      ],
+      "description": "ML model used for prediction"
+    },
+    "risk_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Risk assessment score"
+    }
+  },
+  "required": [
+    "date",
+    "symbol",
+    "signal",
+    "confidence"
+  ]
+}
