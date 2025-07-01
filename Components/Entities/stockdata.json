@@ -1,0 +1,73 @@
+{
+  "name": "StockData",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Trading date"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Stock symbol"
+    },
+    "contract_no": {
+      "type": "string",
+      "description": "Contract number"
+    },
+    "buyer": {
+      "type": "string",
+      "description": "Buyer broker code"
+    },
+    "seller": {
+      "type": "string",
+      "description": "Seller broker code"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Number of shares traded"
+    },
+    "rate": {
+      "type": "number",
+      "description": "Price per share"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Total transaction amount"
+    },
+    "volume": {
+      "type": "number",
+      "description": "Daily trading volume"
+    },
+    "open_price": {
+      "type": "number",
+      "description": "Opening price"
+    },
+    "close_price": {
+      "type": "number",
+      "description": "Closing price"
+    },
+    "high_price": {
+      "type": "number",
+      "description": "Highest price"
+    },
+    "low_price": {
+      "type": "number",
+      "description": "Lowest price"
+    },
+    "price_change": {
+      "type": "number",
+      "description": "Price change from previous day"
+    },
+    "price_change_percent": {
+      "type": "number",
+      "description": "Percentage price change"
+    }
+  },
+  "required": [
+    "date",
+    "symbol",
+    "rate",
+    "quantity"
+  ]
+}
