@@ -1,0 +1,63 @@
+{
+  "name": "BrokerActivity",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Activity date"
+    },
+    "broker_code": {
+      "type": "string",
+      "description": "Broker identification code"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Stock symbol"
+    },
+    "total_buy_quantity": {
+      "type": "number",
+      "description": "Total shares bought"
+    },
+    "total_sell_quantity": {
+      "type": "number",
+      "description": "Total shares sold"
+    },
+    "net_quantity": {
+      "type": "number",
+      "description": "Net buy/sell quantity"
+    },
+    "buy_amount": {
+      "type": "number",
+      "description": "Total buy amount"
+    },
+    "sell_amount": {
+      "type": "number",
+      "description": "Total sell amount"
+    },
+    "net_amount": {
+      "type": "number",
+      "description": "Net buy/sell amount"
+    },
+    "market_share": {
+      "type": "number",
+      "description": "Broker's market share percentage"
+    },
+    "accumulation_score": {
+      "type": "number",
+      "description": "Accumulation pattern score"
+    },
+    "activity_type": {
+      "type": "string",
+      "enum": [
+        "ACCUMULATING",
+        "DISTRIBUTING",
+        "NEUTRAL"
+      ],
+      "description": "Broker activity pattern"
+    },
+    "alert_level": {
+      "type": "string",
+      "enum": [
+        "LOW",
+ 
